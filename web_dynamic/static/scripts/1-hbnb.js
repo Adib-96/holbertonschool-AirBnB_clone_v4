@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    const nameAmenity = [];
-    $('input:checkbox').click(function () {
-      if ($(this).is(":checked")) {
-        nameAmenity.push($(this).attr('data-name'));
-      } else {
-        const nameIndex = nameAmenity.indexOf($(this).attr('data-name'));
-        nameAmenity.splice(nameIndex, 1);
-      }
-      $('.amenities h4').text(nameAmenity.join(', '));
-    });
+  let amenity = [];
+  $('input:checkbox').click(function () {
+    if ($(this).is(":checked")) {
+      amenity.push($(this).attr('data-name'));
+    } else {
+      const nameIndex = amenity.indexOf($(this).attr('data-name'));
+      amenity.splice(nameIndex, 1);
+    }
+    $('.amenities h4').text(amenity.join(', '));
   });
+});
